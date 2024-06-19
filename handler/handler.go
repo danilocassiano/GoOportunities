@@ -50,7 +50,7 @@ func (r*CreateOpeningRequest) Validate()error {
 
 //Updated
 
-type UdpdateOpeningRequest struct {
+type UpdateOpeningRequest struct {
 	Role      string    `json:"role"`
 	Company   string    `json:"company"`
 	Location  string    `json:"location"`
@@ -59,7 +59,7 @@ type UdpdateOpeningRequest struct {
 	Salary    int64     `json:"salary"`
 }
 
-func (r *UdpdateOpeningRequest) Validate() error {
+func (r *UpdateOpeningRequest) Validate() error {
 	if r.Role != "" || r.Company != "" || r.Location != "" || r.Link != "" || r.Remote != nil || r.Salary > 0 {
 		return nil
 	}
